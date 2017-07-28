@@ -9,6 +9,8 @@ export function fetchWeather(city) {
   const url = `${ROOT_URL}&q=${city},us`;
   const request = axios.get(url);
 
+  // Redux- Promise takes care of request promise ( unravels )
+
   return {
     type: FETCH_WEATHER,
     payload: request,
